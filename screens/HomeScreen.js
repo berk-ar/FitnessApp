@@ -9,7 +9,7 @@ const HomeScreen = () => {
                 </View>
 
                 <View style={{ justifyContent: "center", alignItems: "center" }}>
-                    <Image style={styles.imageBaslik} source={styles.imageBaslik.image} />
+                    <Image style={styles.imageBaslik} source={require('../assets/fitnessappgorsel1.jpg')} />
                 </View>
 
                 <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
@@ -50,6 +50,5 @@ const styles = StyleSheet.create({
         height: 150,
         margin: 16,
         borderRadius: 7,
-        image: require("../assets/fitnessappgorsel1.jpg"),
     },
 })
