@@ -1,9 +1,10 @@
-import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import FitnessCards from '../components/FitnessCards';
 
 const HomeScreen = () => {
     return (
-        <SafeAreaView>
-            <View style={{ padding: 10, backgroundColor: "gray" }}>
+        <ScrollView>
+            <View style={{ padding: 10, backgroundColor: "grey" }}>
                 <View style={{ justifyContent: "center", alignItems: "center", marginTop: 16 }}>
                     <Text style={{ fontWeight: "bold", fontSize: 20, color: "white" }}>Home WORKOUT</Text>
                 </View>
@@ -28,8 +29,10 @@ const HomeScreen = () => {
                         <Text style={styles.txtMetin}>MINUTES</Text>
                     </View>
                 </View>
+
+                <FitnessCards />
             </View>
-        </SafeAreaView>
+        </ScrollView>
     )
 }
 
