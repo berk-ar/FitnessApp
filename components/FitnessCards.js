@@ -1,12 +1,18 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native"
 import fitness from "../data/fitness"
+import { useNavigation } from "@react-navigation/native";
 
 const FitnessCards = () => {
     const FitnessData = fitness;
+    const navigation = useNavigation();
     return (
         <View>
             {FitnessData.map((item) => (
-                <Pressable style={styles.cardHizalama}>
+                <Pressable style={styles.cardHizalama} onPress={() => navigation.navigate("Workout", {
+                    image: item.image,
+                    exercises: item.exercises,
+                    id: item.id
+                })}>
                     <Image style={styles.cardBoyut} source={{ uri: item.image }} />
                     <Text style={styles.cardYazi}>{item.name}</Text>
                 </Pressable>
