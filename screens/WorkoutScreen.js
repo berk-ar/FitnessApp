@@ -23,7 +23,9 @@ const WorkoutScreen = () => {
                 </Pressable>
             ))}
 
-            <Pressable style={styles.startButtonStyle}>
+            <Pressable style={styles.startButtonStyle} onPress={() => navigation.navigate("Fit", {
+                exercises: route.params.exercises
+            })}>
                 <Text style={styles.startButtonText}>START</Text>
             </Pressable>
         </ScrollView>
