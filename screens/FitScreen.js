@@ -1,9 +1,10 @@
-import { useRoute } from "@react-navigation/native"
+import { useNavigation, useRoute } from "@react-navigation/native"
 import { useState } from "react";
 import { Image, Pressable, SafeAreaView, StyleSheet, Text, View } from "react-native"
 
 const FitScreen = () => {
     const route = useRoute();
+    const navigation = useNavigation();
     const [index, setIndex] = useState(0);
     const exercise = route.params.exercises;
     const current = exercise[index];
@@ -15,7 +16,13 @@ const FitScreen = () => {
                 <Text style={styles.setsText}>x{current.sets}</Text>
             </View>
 
-            <Pressable style={styles.doneButton}>
+            <Pressable style={styles.doneButton} onPress={() => {
+                navigation.navigate("Rest")
+
+                setTimeout(() => {
+                    setIndex(index + 1)
+                }, 2000)
+            }}>
                 <Text style={styles.doneButtonText}>DONE</Text>
             </Pressable>
         </SafeAreaView>
