@@ -16,16 +16,37 @@ const FitScreen = () => {
                 <Text style={styles.setsText}>x{current.sets}</Text>
             </View>
 
-            <Pressable style={styles.doneButton} onPress={() => {
-                navigation.navigate("Rest")
+            {index + 1 > exercise.length ? (
+                <Pressable style={styles.doneButton} onPress={() => {
+                    navigation.navigate("Home")
+                }}>
+                    <Text style={styles.doneButtonText}>DONE</Text>
+                </Pressable>
+            ) : (
+                <Pressable style={styles.doneButton} onPress={() => {
+                    navigation.navigate("Rest")
 
-                setTimeout(() => {
-                    setIndex(index + 1)
-                }, 2000)
-            }}>
-                <Text style={styles.doneButtonText}>DONE</Text>
-            </Pressable>
-        </SafeAreaView>
+                    setTimeout(() => {
+                        setIndex(index + 1)
+                    }, 5000)
+                }}>
+                    <Text style={styles.doneButtonText}>DONE</Text>
+                </Pressable>
+            )
+            }
+
+
+
+            <View style={styles.bottomButtons}>
+                <Pressable style={styles.buttons}>
+                    <Text style={styles.text}>PREV</Text>
+                </Pressable>
+
+                <Pressable style={styles.buttons}>
+                    <Text style={styles.text}>SKIP</Text>
+                </Pressable>
+            </View>
+        </SafeAreaView >
     )
 }
 
@@ -62,5 +83,23 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 18,
         width: 75
+    },
+    buttons: {
+        backgroundColor: "green",
+        padding: 10,
+        borderRadius: 10,
+        marginHorizontal: 20
+    },
+    text: {
+        color: "white",
+        textAlign: "center",
+        fontWeight: "bold"
+    },
+    bottomButtons: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginLeft: "auto",
+        marginRight: "auto",
+        marginTop: 40
     }
 })

@@ -4,9 +4,9 @@ import FitnessCards from '../components/FitnessCards';
 const HomeScreen = () => {
     return (
         <ScrollView>
-            <View style={{ padding: 10, backgroundColor: "grey" }}>
+            <View style={{ padding: 10, backgroundColor: "white" }}>
                 <View style={{ justifyContent: "center", alignItems: "center", marginTop: 16 }}>
-                    <Text style={{ fontWeight: "bold", fontSize: 20, color: "white" }}>Home WORKOUT</Text>
+                    <Text style={{ fontWeight: "bold", fontSize: 20, color: "black" }}>Home WORKOUT</Text>
                 </View>
 
                 <View style={{ justifyContent: "center", alignItems: "center" }}>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     txtSayi: {
         textAlign: "center",
         fontWeight: "bold",
-        color: "white",
+        color: "black",
         fontSize: 16,
     },
     txtMetin: {
