@@ -2,7 +2,7 @@ export default [
     {
       id: "0",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEM-6gDUO7g1cdrNhBaqk_0nwxy6ILlIqsQ&usqp=CAU",
+        "https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2021/02/Full-body-workout-training-program.jpg?fit=2208%2C1474&ssl=1",
       name: "FULL BODY",
       description: "7x4 CHALLENGE",
       exercises: [
@@ -48,7 +48,7 @@ export default [
     {
       id: "1",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRonpSjpGQ2-JD8-XFFD7LYsVSFCOiASj0wSOq1qxNvxGFHe7W6AU1LRAeJ2fOIzYICMGc&usqp=CAU",
+        "https://cdn.muscleandstrength.com/sites/default/files/8_weeks_to_flat_stomach_-_1200x630.jpg",
       name: "ABS BEGINNER",
       description: "7x4 CHALLENGE",
       exercises : [
@@ -87,7 +87,7 @@ export default [
     {
       id: "2",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1NHvoutGn-Vr_uwVbOOtezhENvx9jhV6pfQ&usqp=CAU",
+        "https://www.bodybuilding.com/images/2018/january/the-arm-workout-youll-feel-till-next-week-header-v2-MUSCLETECH-960x540.jpg",
       name: "ARM BEGINNER",
       description: "7x4 CHALLENGE",
       exercises:[
@@ -139,7 +139,7 @@ export default [
     {
       id: "3",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCT0tewpNAZ6R9JUoMDHIHGnpE44U2Fl1Zw&usqp=CAU",
+        "https://www.yourworkoutbook.com/wp-content/uploads/2022/06/Dumbbell-Chest-Exercises-without-a-Weight-Bench-1024x684.jpg",
       name: "CHEST BEGINNER",
       description: "7x4 CHALLENGE",
       exercises: [
