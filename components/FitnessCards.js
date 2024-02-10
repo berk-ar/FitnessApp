@@ -17,7 +17,6 @@ const FitnessCards = () => {
                     <Text style={styles.cardYazi}>{item.name}</Text>
                 </Pressable>
             ))}
-            <Text>FitnessCards</Text>
         </View>
     )
 }

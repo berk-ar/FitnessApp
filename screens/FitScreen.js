@@ -35,17 +35,36 @@ const FitScreen = () => {
             )
             }
 
-
-
             <View style={styles.bottomButtons}>
-                <Pressable style={styles.buttons}>
+                <Pressable disabled={index === 0} style={styles.buttons} onPress={() => {
+                    navigation.navigate("Rest");
+
+                    setTimeout(() => {
+                        setIndex(index - 1)
+                    }, 5000)
+                }}>
                     <Text style={styles.text}>PREV</Text>
                 </Pressable>
 
-                <Pressable style={styles.buttons}>
-                    <Text style={styles.text}>SKIP</Text>
-                </Pressable>
+                {index + 1 >= exercise.length ? (
+                    <Pressable style={styles.buttons} onPress={() => {
+                        navigation.navigate("Home")
+                    }}>
+                        <Text style={styles.text}>SKIP</Text>
+                    </Pressable>
+                ) : (
+                    <Pressable style={styles.buttons} onPress={() => {
+                        navigation.navigate("Rest")
+
+                        setTimeout(() => {
+                            setIndex(index + 1)
+                        }, 5000)
+                    }}>
+                        <Text style={styles.text}>SKIP</Text>
+                    </Pressable>
+                )}
             </View>
+
         </SafeAreaView >
     )
 }
