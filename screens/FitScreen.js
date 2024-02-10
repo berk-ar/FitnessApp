@@ -16,7 +16,7 @@ const FitScreen = () => {
                 <Text style={styles.setsText}>x{current.sets}</Text>
             </View>
 
-            {index + 1 > exercise.length ? (
+            {index + 1 >= exercise.length ? (
                 <Pressable style={styles.doneButton} onPress={() => {
                     navigation.navigate("Home")
                 }}>
