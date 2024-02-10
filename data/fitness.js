@@ -15,7 +15,7 @@ export default [
         },
         {
             id:"11",
-            image:"https://177d01fbswx3jjl1t20gdr8j-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/Incline-Push-Up.gif",
+            image:"https://www.verywellfit.com/thmb/GG7EXAUxQvwxiu4QAzDBPu6yy44=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/90-3120038--Incline-PushupsGIF-d321334ec54849539010832028d5635a.gif",
             name:"INCLINE PUSH-UPS",
             sets:10,
         },
@@ -99,13 +99,13 @@ export default [
         },
         {
           id:"71",
-          image:"https://thumbs.gfycat.com/CompleteZigzagFossa-max-1mb.gif",
+          image:"https://j.gifs.com/xkADMP.gif",
           name:"TRICEP DIPS",
           sets:10,
         },
         {
           id:"72",
-          image:"https://thumbs.gfycat.com/MisguidedAridAlaskanmalamute-max-1mb.gif",
+          image:"https://www.lifetime60day.com/wp-content/uploads/2017/11/Diamond-Push-Up.gif",
           name:"DIAMOND_PUSHUP",
           sets:10,
         },
@@ -157,13 +157,13 @@ export default [
         },
         {
           id:"22",
-          image:"https://thumbs.gfycat.com/TheseRigidBorer-size_restricted.gif",
+          image:"https://media.post.rvohealth.io/wp-content/uploads/sites/2/2021/02/400x400_9_Stretches_to_Benefit_Your_Golf_Game_Shoulder_Swing_Stretch.gif",
           name:"SHOULDER STRETCH",
           sets:5,
         },
         {
           id:"23",
-          image:"https://thumbs.gfycat.com/AlertAfraidAldabratortoise-max-1mb.gif",
+          image:"https://qph.cf2.quoracdn.net/main-qimg-6b009378bf19c2ffe6fa33384dfff70d",
           name:"COBRA STRETCH",
           sets:4,
         },

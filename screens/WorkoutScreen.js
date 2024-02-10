@@ -1,10 +1,14 @@
 import { useNavigation, useRoute } from "@react-navigation/native"
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native"
 import { Ionicons } from '@expo/vector-icons';
+import { useContext } from "react";
+import { FitnessItems } from "../Context";
+import { FontAwesome } from '@expo/vector-icons';
 
 const WorkoutScreen = () => {
     const route = useRoute();
     const navigation = useNavigation();
+    const { completed, setCompleted } = useContext(FitnessItems)
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <View>
@@ -20,12 +24,21 @@ const WorkoutScreen = () => {
                         <Text style={styles.workoutText}>{item.name}</Text>
                         <Text style={styles.setsText}>x{item.sets}</Text>
                     </View>
+
+                    {completed.includes(item.name) ? (
+                        <FontAwesome style={styles.checkCircleImage} name="check-circle" size={24} color="green" />
+                    ) : (
+                        null
+                    )}
                 </Pressable>
             ))}
 
-            <Pressable style={styles.startButtonStyle} onPress={() => navigation.navigate("Fit", {
-                exercises: route.params.exercises
-            })}>
+            <Pressable style={styles.startButtonStyle} onPress={() => {
+                navigation.navigate("Fit", {
+                    exercises: route.params.exercises
+                })
+                setCompleted([]);
+            }}>
                 <Text style={styles.startButtonText}>START</Text>
             </Pressable>
         </ScrollView>
@@ -46,7 +59,8 @@ const styles = StyleSheet.create({
     },
     workoutText: {
         fontSize: 18,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        width: 180,
     },
     setsText: {
         marginTop: 4,
@@ -68,5 +82,8 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 20,
         fontWeight: "bold"
+    },
+    checkCircleImage: {
+        marginLeft: 30,
     }
 })

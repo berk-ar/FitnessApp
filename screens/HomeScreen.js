@@ -1,7 +1,10 @@
 import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import FitnessCards from '../components/FitnessCards';
+import { useContext } from 'react';
+import { FitnessItems } from '../Context';
 
 const HomeScreen = () => {
+    const { workout, calories, minutes } = useContext(FitnessItems)
     return (
         <ScrollView>
             <View style={{ padding: 10, backgroundColor: "white" }}>
@@ -10,22 +13,22 @@ const HomeScreen = () => {
                 </View>
 
                 <View style={{ justifyContent: "center", alignItems: "center" }}>
-                    <Image style={styles.imageBaslik} source={require('../assets/fitnessappgorsel1.jpg')} />
+                    <Image style={styles.imageBaslik} source={require('../assets/workout_image.jpg')} />
                 </View>
 
                 <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                     <View>
-                        <Text style={styles.txtSayi}>0</Text>
+                        <Text style={styles.txtSayi}>{workout}</Text>
                         <Text style={styles.txtMetin}>WORKOUTS</Text>
                     </View>
 
                     <View>
-                        <Text style={styles.txtSayi}>0</Text>
+                        <Text style={styles.txtSayi}>{calories}</Text>
                         <Text style={styles.txtMetin}>KCAL</Text>
                     </View>
 
                     <View>
-                        <Text style={styles.txtSayi}>0</Text>
+                        <Text style={styles.txtSayi}>{minutes}</Text>
                         <Text style={styles.txtMetin}>MINUTES</Text>
                     </View>
                 </View>
@@ -49,8 +52,8 @@ const styles = StyleSheet.create({
         marginTop: 6,
     },
     imageBaslik: {
-        width: "90%",
-        height: 150,
+        width: "100%",
+        height: 110,
         margin: 16,
         borderRadius: 7,
     },
